@@ -1,6 +1,6 @@
-const BASE_URL = 'https://thinkful-list-api.herokuapp.com/[yourname]';
+const BASE_URL = 'https://thinkful-list-api.herokuapp.com/adam';
 
-const getItems() {
+function getItems()  {
   return Promise.resolve('A successful response!');
 }
 
