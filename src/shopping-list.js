@@ -52,7 +52,6 @@ const handleNewItemSubmit = function () {
     const newItemName = $('.js-shopping-list-entry').val();
     $('.js-shopping-list-entry').val('');
     api.createItem(newItemName)
-      .then(res => res.json())
       .then((newItem) => {
         store.addItem(newItem);
         render();
@@ -76,7 +75,7 @@ const handleDeleteItemClicked = function () {
       .then (() => {
         store.findAndDelete (id);
         render();
-      })
+      });
   });
 };
 
@@ -86,7 +85,6 @@ const handleEditShoppingItemSubmit = function () {
     const id = getItemIdFromElement(event.currentTarget);
     const itemName = $(event.currentTarget).find('.shopping-item').val();
     api.updateItem (id, {name: itemName})
-      .then (res => res.json())
       .then(() => {
         store.findAndUpdate (id, {name: itemName});
         render();
