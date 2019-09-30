@@ -1,6 +1,9 @@
 const BASE_URL = 'https://thinkful-list-api.herokuapp.com/adam';
 
-function getItems()  {
+const getItems = function()  {
+  fetch('https://thinkful-list-api.herokuapp.com/adam/items')
+    .then (res => res.json())
+    .then (resonseJson => console.log(resonseJson));
   return Promise.resolve('A successful response!');
 }
 
