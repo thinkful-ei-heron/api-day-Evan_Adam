@@ -1,4 +1,4 @@
-import item from './item';
+// import item from './item';
 
 const items = [];
 let hideCheckeditems = false;
@@ -12,9 +12,9 @@ const addItem = function (item) {
 };
 
 const findAndUpdate = function (id, newData) {
-  const item = this.items.find(currentItem => currentItem.id === id);
-  Object.assign(item, newData);
-}
+  let newItem = this.findById(id);
+  Object.assign(newItem, newData);
+};
 
 const findAndDelete = function (id) {
   this.items = this.items.filter(currentItem => currentItem.id !== id);
