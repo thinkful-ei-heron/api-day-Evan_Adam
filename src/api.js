@@ -14,8 +14,8 @@ const createItem = function (name) {
       'Content-Type': 'application/json'
     },
     body: newItem
-  })
-}
+  });
+};
 
 
 
