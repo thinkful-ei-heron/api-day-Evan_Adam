@@ -14,7 +14,9 @@ const main = function () {
     .then((items) => {
       items.forEach((item) => store.addItem(item));
       shoppingList.render();
+    
     });
+    
   console.log(api.BASE_URL);
   shoppingList.bindEventListeners();
   shoppingList.render();
